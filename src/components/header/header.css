@@ -1,0 +1,233 @@
+.header {
+  height: 250px;
+  width: 100%;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+/* Header Top  */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  padding: 0 30px;
+  border-bottom: 1px solid var(--main-color);
+}
+.header-top-menu {
+  display: none;
+  font-size: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--main-color);
+  width: 31px;
+}
+.header-top-phone,
+.header-top-text,
+.header-top-link {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--main-color);
+  text-decoration: none;
+}
+.header-top-link {
+  cursor: pointer;
+}
+
+/* Header Middle  */
+.header-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  padding: 0 30px;
+}
+.header-middle-logo,
+.header-middle-cart {
+  font-size: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.header-middle-cart .notifications {
+  color: white;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -24px;
+  right: 20px;
+  font-size: 17px;
+}
+.header-middle-search-box {
+  background-color: white;
+  border-radius: 50px;
+  height: 60px;
+  position: relative;
+  width: 700px;
+  overflow: hidden;
+}
+.header-middle .icon {
+  font-size: 40px;
+}
+.header-middle-search-box input[type="search"] {
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  padding-left: 50px;
+}
+.header-middle-search-box .search-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 40px;
+  color: gray;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  box-shadow: 0 0 1px 1px gray;
+}
+.navbar > ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.navbar > ul .navbar-link {
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #525452;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar > ul .navbar-link:hover {
+  background-color: snow;
+  transition: 0.2s;
+}
+.active {
+  background-color: snow;
+}
+
+/* Media Queries */
+@media (max-width: 1199px) {
+  .modal-content {
+    width: 92%;
+  }
+  .header-middle-search-box {
+    width: 500px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar {
+    height: 20%;
+  }
+  .header-top-phone,
+  .header-top-text,
+  .header-top-link {
+    font-size: 22px;
+  }
+
+  .header-middle {
+    flex-wrap: wrap;
+    height: 60%;
+    padding: 0 30px;
+  }
+  .header-middle-search-box {
+    width: 100%;
+    order: 0;
+  }
+  .header-middle-cart {
+    order: 1;
+  }
+  .header-middle-logo {
+    order: 2;
+  }
+}
+@media (max-width: 767px) {
+  .header-top-phone,
+  .header-top-text,
+  .header-top-link,
+  .header-middle-search-box input[type="search"] {
+    font-size: 20px;
+  }
+  .header-middle-search-box .search-icon {
+    font-size: 35px;
+  }
+  .header-top-text {
+    display: none;
+  }
+  .header-top-menu {
+    display: block;
+  }
+  .header-middle {
+    flex-wrap: wrap;
+    height: 80%;
+    padding: 0 30px;
+  }
+  .header-middle-search-box {
+    width: 100%;
+    order: 0;
+  }
+  .header-middle-logo {
+    order: 1;
+  }
+  .navbar {
+    position: fixed;
+    width: 300px;
+    top: 50px;
+    left: -300px;
+    transition: all 0.5s ease;
+    height: 100vh;
+    align-items: flex-start;
+    z-index: 999;
+  }
+  .navbar > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    height: max-content;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar > ul .navbar-link {
+    padding: 30px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
+}
+@media (max-width: 575px) {
+  .navbar {
+    width: 250px;
+    left: -250px;
+  }
+  .header-top,
+  .header-middle {
+    padding: 0 15px;
+  }
+  .header-top-menu {
+    font-size: 30px;
+  }
+  .header-middle .icon {
+    font-size: 30px;
+  }
+  .header-middle-logo,
+  .header-middle-cart {
+    font-size: 20px;
+  }
+}

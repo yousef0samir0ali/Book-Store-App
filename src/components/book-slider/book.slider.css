@@ -1,0 +1,94 @@
+.book-slider-container {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 60px;
+  position: relative;
+  background-color: white;
+}
+.book-slider-container .arrow-left,
+.book-slider-container .arrow-right {
+  width: 50px;
+  height: 80px;
+  color: var(--main-color);
+  background-color: #222;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  font-size: 32px;
+}
+.book-slider-container .arrow-left {
+  left: 10px;
+}
+.book-slider-container .arrow-right {
+  right: 10px;
+}
+.book-slider-wrapper {
+  display: flex;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.book-slide-item {
+  width: 340px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: snow;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.book-slide-img {
+  width: 60%;
+  object-fit: contain;
+}
+.book-slide-item h2 {
+  font-size: 18px;
+}
+.book-slide-item .price {
+  color: crimson;
+  font-weight: bold;
+  font-size: 21px;
+}
+.book-slide-item .icons {
+  border-top: 1px solid gray;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+.book-slide-item .icons .icon {
+  font-size: 27px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: rgb(67, 67, 67);
+}
+
+/* rating */
+.rating {
+  color: rgb(255, 166, 0);
+  display: flex;
+}
+.rating .icon {
+  font-size: 21px;
+  margin: 0 2px;
+}
+.rating span:first-of-type {
+  font-weight: 500;
+  margin: 0 12px;
+  font-size: 18px;
+}
+.rating span:last-of-type {
+  color: gray;
+  font-size: 15px;
+  font-weight: 600;
+}

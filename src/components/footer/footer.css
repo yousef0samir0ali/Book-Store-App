@@ -1,0 +1,125 @@
+.footer {
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+}
+
+/* footer-social-media */
+.footer-social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--main-color);
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.footer-social-media .text {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 500;
+}
+.footer-social-media .icons {
+  display: flex;
+  align-items: center;
+}
+.footer-social-media .icons .icon {
+  margin: 0 15px;
+  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* footer-links */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.footer-links .item {
+  width: 30%;
+  color: var(--main-color);
+}
+.footer-links .item h3 {
+  color: white;
+  font-size: 21px;
+  border-bottom: 3px solid white;
+  width: fit-content;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.footer-links .item ul {
+  padding: 5px;
+}
+.footer-links .item ul .link {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  color: var(--main-color);
+}
+.footer-links .item .icon-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.footer-links .item .icon-wrapper .icon {
+  font-size: 27px;
+  margin-right: 5px;
+}
+.footer-links .item p {
+  padding: 5px;
+  font-size: 17px;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .footer-links {
+    flex-wrap: wrap;
+  }
+  .footer-social-media .icons .icon {
+    margin: 0 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+  }
+  .footer-links .item:nth-child(1),
+  .footer-links .item:nth-child(2) {
+    width: 50%;
+  }
+  .footer-links .item:last-child {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-social-media {
+    flex-direction: column;
+  }
+  .footer-social-media .text {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .footer {
+    padding: 15px;
+  }
+  .footer-links .item h3 {
+    font-size: 16px;
+  }
+  .footer-links .item .icon-wrapper,
+  .footer-links .item ul li,
+  .footer-links .item p {
+    font-size: 15px;
+  }
+  .footer-links .item .icon-wrapper .icon {
+    font-size: 21px;
+  }
+}
