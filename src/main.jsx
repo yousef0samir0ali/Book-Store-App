@@ -8,7 +8,7 @@ import CartProvider from "./context/CartProvider";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Book-Store-App">
         <App />
       </BrowserRouter>
     </CartProvider>

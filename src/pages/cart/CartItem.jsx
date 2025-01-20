@@ -3,11 +3,12 @@ import { faMinus, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import cartContext from "../../context/cartContext";
 export default function CartItem({ item }) {
+  // @ts-ignore
   let { removeFromCart, addToCart } = useContext(cartContext);
 
   return (
     <div className="cart-item">
-      <img src={`/books/${item.image}`} alt={item.title} />
+      <img src={`/Book-Store-App/books/${item.image}`} alt={item.title} />
       <div className="info">
         <div className="left">
           <div className="title">

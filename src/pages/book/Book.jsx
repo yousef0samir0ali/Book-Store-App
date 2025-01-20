@@ -20,13 +20,14 @@ export default function Book() {
     window.scrollTo(0, 0);
   }, []);
 
+  // @ts-ignore
   let { addToCart } = useContext(cartContext);
   const [qty, setQty] = useState(1);
 
   return (
     <div className="book">
       <div className="book-content">
-        <img src={`/books/${book.image}`} alt={book.title} />
+        <img src={`/Book-Store-App/books/${book.image}`} alt={book.title} />
         <div className="info">
           <h1>{book.title}</h1>
           <div className="author">
@@ -39,6 +40,7 @@ export default function Book() {
               min={1}
               max={100}
               value={qty}
+              // @ts-ignore
               onChange={(e) => setQty(e.target.value)}
             />
             <button onClick={() => addToCart({ ...book, quantity: qty })}>

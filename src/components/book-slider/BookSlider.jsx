@@ -15,6 +15,7 @@ export default function BookSlider({ data }) {
   const [openModal, setOpenModal] = useState(false);
   const [bookData, setBookData] = useState(null);
 
+  // @ts-ignore
   const { addToCart } = useContext(cartContext);
 
   //Handle Modal
@@ -48,7 +49,7 @@ export default function BookSlider({ data }) {
         {data.map((item) => (
           <div key={item.id} className="book-slide-item">
             <img
-              src={`/books/${item.image}`}
+              src={`/Book-Store-App/books/${item.image}`}
               alt={item.title}
               className="book-slide-img"
             />

@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import { useContext, useEffect } from "react";
 import cartContext from "../../context/cartContext";
 export default function Cart() {
+  // @ts-ignore
   let { cartItems } = useContext(cartContext);
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import cartContext from "../../context/cartContext";
 
 export default function Modal({ bookData, setOpenModal }) {
+  // @ts-ignore
   let { addToCart } = useContext(cartContext);
 
   const [Qty, setQty] = useState(1);
@@ -31,7 +32,10 @@ export default function Modal({ bookData, setOpenModal }) {
           className="iconX"
         />
         <div className="image">
-          <img src={`/books/${bookData.image}`} alt={bookData.title} />
+          <img
+            src={`Book-Store-App/books/${bookData.image}`}
+            alt={bookData.title}
+          />
         </div>
         <div className="info">
           <h5> {bookData.title} </h5>
