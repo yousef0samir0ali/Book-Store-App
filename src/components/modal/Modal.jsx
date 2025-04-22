@@ -26,16 +26,9 @@ export default function Modal({ bookData, setOpenModal }) {
   return (
     <div onClick={() => setOpenModal(false)} className="modal-container">
       <div onClick={(e) => e.stopPropagation()} className="modal-content">
-        <FontAwesomeIcon
-          onClick={() => setOpenModal(false)}
-          icon={faCircleXmark}
-          className="iconX"
-        />
+        <FontAwesomeIcon onClick={() => setOpenModal(false)} icon={faCircleXmark} className="iconX" />
         <div className="image">
-          <img
-            src={`Book-Store-App/books/${bookData.image}`}
-            alt={bookData.title}
-          />
+          <img src={`/Book-Store-App/books/${bookData.image}`} alt={bookData.title} />
         </div>
         <div className="info">
           <h5> {bookData.title} </h5>
@@ -52,13 +45,7 @@ export default function Modal({ bookData, setOpenModal }) {
             <b>Price: </b>${bookData.price}
           </div>
           <div className="add-to-cart">
-            <input
-              type="number"
-              min={1}
-              max={100}
-              value={Qty}
-              onChange={handleChange}
-            />
+            <input type="number" min={1} max={100} value={Qty} onChange={handleChange} />
 
             <button onClick={() => addToCart({ ...bookData, quantity: Qty })}>
               <FontAwesomeIcon icon={faCartPlus} className="icon" />
